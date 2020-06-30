@@ -3,8 +3,8 @@ package bj1
 class Card(val value: Int, val suit: Int) {
 
     init {
-        require(value in 1..13, { "Bad value" + value })
-        require(suit in 1..4, { "Bad suit" + suit })
+        require(value in 1 until 14, { "Bad value" + value })
+        require(suit in 1 until 15, { "Bad suit" + suit })
     }
 
     val suitName: String get() = when (suit) {
@@ -17,7 +17,7 @@ class Card(val value: Int, val suit: Int) {
 
     val valueName: String get() = when (value) {
         1 -> "Ace"
-        in 2..10 -> value.toString()
+        in 2 until 11 -> value.toString()
         11 -> "Jack"
         12 -> "Queen"
         13 -> "King"
@@ -27,8 +27,8 @@ class Card(val value: Int, val suit: Int) {
     val name: String get() = valueName + "of" + suitName
 
     val points: Int get() = when (value) {
-        in 1..9 -> value
-        in 10..13 -> 10
+        in 1 until 10 -> value
+        in 10 until 14 -> 10
         else -> throw IllegalStateException()
     }
 }
