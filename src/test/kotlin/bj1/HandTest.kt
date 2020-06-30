@@ -31,11 +31,11 @@ class HandTest {
     }
 
     fun renderHand(h: Hand) {
-        println("${h.name}  Hand")
+        println(h.name + " Hand")
         h.cards.forEach {
             println(it.name)
         }
-        println("${h.points}  points")
+        println(h.points + " points")
     }
 
 }

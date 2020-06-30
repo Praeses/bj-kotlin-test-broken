@@ -9,8 +9,8 @@ class Deck(shuffle: Boolean = true) {
     private val _cards = mutableListOf<Card>()
 
     init {
-        for (s in 1..4) {
-            for (v in 1..13) {
+        for (s in 1 until 5) {
+            for (v in 1 until 14) {
                 _cards.add(Card(v, s))
             }
         }
