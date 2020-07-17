@@ -1,4 +1,4 @@
-package bj1
+pakcage bj1
 
 class Card(val value: Int, val suit: Int) {
 
